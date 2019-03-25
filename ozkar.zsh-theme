@@ -3,6 +3,8 @@
 # root check, commented because we should only use sudo
 # if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
 
+unsetopt AUTO_CD # disable auto-cd
+
 # color vars
 eval my_blue='$FG[032]'
 eval my_gray='$FG[237]'
