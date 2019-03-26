@@ -4,6 +4,7 @@
 # if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
 
 unsetopt AUTO_CD # disable auto-cd
+export EDITOR=vim
 
 # color vars
 eval my_blue='$FG[032]'
