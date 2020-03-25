@@ -1,3 +1,7 @@
 # ozkar oh-my-zsh theme
 
-Just drop this into `~/.oh-my-zsh/custom/themes/` and set theme to `ozkar` on `.zshrc`
+To install run:
+
+```
+sh -c $(curl -fsSL https://raw.githubusercontent.com/ozkar99/ozkar-omz/master/install.sh)
+```
