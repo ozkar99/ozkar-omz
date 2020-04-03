@@ -28,3 +28,20 @@ ZSH_THEME_GIT_PROMPT_DIRTY="$my_orange*%{$reset_color%}"
 # virtualenv settings
 ZSH_THEME_VIRTUALENV_PREFIX="%{$my_lightblue%}[%{$my_green%}"
 ZSH_THEME_VIRTUALENV_SUFFIX="%{$my_lightblue%}]%{$reset_color%}"
+
+# alias and what not, basically this should be on plugins but life is too short.
+
+PATH=$PATH:~/.bin # i like to keep scripts here
+
+ulimit -n 4096
+
+# run tcp-dump on a remote host and forward to local wireshark
+wireshark-ssh() {
+  if [[ -z "$1" ]]; then
+    echo "hostname missing"
+    return -1
+  fi
+
+  ssh $1 "sudo tcpdump -U -i any -s0 -w -" | wireshark -k -i -
+}
+
